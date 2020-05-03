@@ -1,10 +1,13 @@
+
+
 const Query = {
 
-    hello(){
-        return "Hello"
+    user(parent, args, {db}, info) {
+        return db.users
     }
 
 }
+
 
 
 

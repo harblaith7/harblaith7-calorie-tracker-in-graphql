@@ -1,5 +1,5 @@
 type Query {
-    user: User!
+    user: [User!]!
 }
 
 type User {
@@ -8,6 +8,7 @@ type User {
     email: String
     age: Int!
     weight: Float!
+    height: Float!
     wantsToLoseWeight: Boolean!
 }
 
