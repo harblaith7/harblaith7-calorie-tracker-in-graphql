@@ -1,6 +1,9 @@
 type Query {
-    user(id: ID!): [User!]!
+    users(id: ID!): [User!]!
+    tabs(id: ID!): [Tab!]!
+    reactions(id: ID!) [Reaction!]!
 }
+
 
 type User {
     id: ID!
@@ -10,6 +13,27 @@ type User {
     weight: Float!
     height: Float!
     wantsToLoseWeight: Boolean!
+    tabs: [Tab!]!
+    reactions: [Reaction!]!
+}
+
+type Tab {
+    id: ID!
+    name: String!
+    calories: Float!
+    fats: Float!
+    carbs: Float!
+    protiens: Float!
+    sugar: Float!
+    user: User!
+    reactions: [Reaction!]!
+}
+
+type Reaction {
+    id: ID!
+    emoji: String!
+    user: User!
+    tab: Tab!
 }
 
 
