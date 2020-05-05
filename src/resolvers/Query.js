@@ -2,7 +2,7 @@
 
 const Query = {
 
-    user(parent, args, {db}, info) {
+    users(parent, args, {db}, info) {
 
         if(args.id){
             const userExists = db.users.some(user => {
@@ -18,6 +18,32 @@ const Query = {
             })
         }
         return db.users
+    },
+
+    tabs(parent, args, {db}, info) {
+        
+        if(args.id){
+
+            const tabExists = db.tabs.some(tab => {
+                return tab.id === args.id
+            })
+
+            if(!tabExists){
+                throw new Error("No tab with such ID")
+            }
+
+            return db.tabs.filter(tab => {
+                return tab.id === args.id
+            })
+
+        }
+
+        return db.tabs
+
+    },
+
+    reactions(parent, args, {db}, info) {
+        return db.reactions
     }
 }
 

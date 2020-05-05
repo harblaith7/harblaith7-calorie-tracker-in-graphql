@@ -1,7 +1,7 @@
 type Query {
-    users(id: ID!): [User!]!
-    tabs(id: ID!): [Tab!]!
-    reactions(id: ID!) [Reaction!]!
+    users(id: ID): [User!]!
+    tabs(id: ID): [Tab!]!
+    reactions: [Reaction!]!
 }
 
 
@@ -16,6 +16,8 @@ type User {
     tabs: [Tab!]!
     reactions: [Reaction!]!
 }
+
+
 
 type Tab {
     id: ID!
@@ -35,6 +37,3 @@ type Reaction {
     user: User!
     tab: Tab!
 }
-
-
-

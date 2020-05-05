@@ -28,8 +28,64 @@ const users = [
     }
 ]
 
+const tabs = [
+    {
+        id: "fasf35",
+        name: "Ice Cream",
+        calories: 430.5,
+        fats: 25.3,
+        carbs: 50.2,
+        protiens: 5.3,
+        sugar: 45.3,
+        user: "6fkgs849",
+    },
+    {
+        id: "dasd44a",
+        name: "Egg Omelette",
+        calories: 530.5,
+        fats: 27.3,
+        carbs: 5.2,
+        protiens: 30.3,
+        sugar: 1.3,
+        user: "23i4g6243",
+    },
+    {
+        id: "86lfs22",
+        name: "Lentil Soup",
+        calories: 230.5,
+        fats: 1.3,
+        carbs: 15.2,
+        protiens: 7.5,
+        sugar: 0.5,
+        user: "23i4g6243",
+    },
+]
+
+const reactions = [
+   {
+    id: "65lla2",
+    emoji: "proud",
+    user: "hd77s384",
+    tab: "dasd44a"
+   },
+   {
+    id: "64ggla2",
+    emoji: "disappointed",
+    user: "hd77s384",
+    tab: "dasd44a"
+   },
+   {
+    id: "hd77s384",
+    emoji: "suprised",
+    user: "23i4g6243",
+    tab: "dasd44a"
+   },
+]
+
 const db = {
-    users
+    users,
+    tabs,
+    reactions
 }
 
 export default db
